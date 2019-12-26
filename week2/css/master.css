@@ -45,7 +45,7 @@ p{
         width: 80%;
     }
 }
-@media(max-width:1199px) and (min-width: 768px){
+@media(max-width:991px) and (min-width: 768px){
 
     div{
         width: 45%;
@@ -55,7 +55,7 @@ p{
         width: 90%;
     }
 }
-@media(min-width: 1200px){
+@media(min-width: 992px){
     div{
         display: inline-block;
         width: 30%
