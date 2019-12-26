@@ -3,3 +3,8 @@ This is the repository containing the submission for the 2nd Week Peer Graded As
 
 This is my first time doing Responsive Web Design. The implementation of Media Queries can be seen. The use of any frameworks, as prohibited, wasn't implemented.
 The conditions stated have been checked.
+
+Desktop: ![Desktop](images/desktop.jpg)
+Tablet: ![Tablet](images/tablet.jpg)
+Mobile: ![Mobile](images/mobile.jpg)
+
