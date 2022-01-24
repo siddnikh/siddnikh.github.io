@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/martialArts.css">
+    <link rel="icon" type="image/x-icon" href="img/rocket_favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+    <title>Siddharth Nikhil - Martial Arts Simulator</title>
+    <script src = "https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav>
+        <a class = "home-logo" href="index.html"><img src="img/home-logo.png" alt="rolling stones bitchezzz"></a>
+        <a target = "_blank" class = "nav-contact" href="https://twitter.com/IngerDar"><img src="img/twitter.png" alt=" Contact - Twitter"></a>
+        <a target = "_blank" class = "nav-contact" href="https://github.com/siddnikh"><img src="img/github.png" alt="Contact - Github"></a>
+        <a target = "_blank" class = "nav-contact" href="https://linkedin.com/in/siddnikh"><img src="img/linkedin.png" alt="Contavt - LinkedIn"></a>
+        <a target = "_blank" class = "nav-contact" href="https://open.spotify.com/user/uv86e08ltalmn0ngxe4mywl58"><img src="img/spotify.png" alt="Spotify"></a>
+    </nav>
+    <div>
+        <center>
+            <h1>Martial Arts Simulator</h1>
+        </center>
+        <div class="game" >
+            <canvas id = "mycanvas" style = "background: url('img2/background.jpg'); background-size: cover;"></canvas>
+            <div class = "buttons">
+                <button onclick = "moveLeft()" id = "left">Move Left (Left Arrow Key)</button>
+                <button onclick = "moveRight()" id = "right">Move Right (Right Arrow Key)</button>
+                <button onclick = "kick()" id = "kick">Kick (K)</button>
+                <button onclick = "punch()" id = "punch">Punch (P)</button>
+                <button onclick = "block()" id = "block">Block (B)</button>
+            </div>
+        </div>
+        <center>
+            <button onclick = "startGame()" style="background-color: white; border: 0.2em solid red; padding: 1em; margin-top: 1vw;">Play!</button>
+        </center>
+    </div>
+    <script src = "js/martialArts.js"></script>
+</body>
+</html>

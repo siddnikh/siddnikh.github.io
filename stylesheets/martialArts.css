@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Gang of Three;
+    src: url('go3v2.ttf');
+}
+
+body{
+    background-image: url("../img/chinese.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    overflow: auto;
+}
+
+nav{
+    padding-top: 2vw;
+    padding-right: 4vw;
+    padding-left: 4vw;
+    overflow: hidden;
+    background-color: black;
+    text-align: center;
+    max-height: 10vw;
+    border-radius: 0px 0px 35px 35px;
+}
+
+nav > img{
+    width: 15vw;
+    margin-top: 1.5vw;
+    display: inline-block;
+}
+a.nav-contact{
+    width: 3vw;
+    float: right;
+    margin: 1vw;
+}
+
+.home-logo{
+    float: left;
+    margin-top: 0;
+    padding-top: 0;
+    width: 10vw;
+}
+
+center > h1{
+    font-family: 'Gang of Three';
+    font-size: 6vw;
+    color: gold;
+}
+
+#mycanvas{
+    display: inline-block;
+    border: 0.5vw solid red;
+    margin-left: 10%;
+    width: 960px;
+    height: 540px;
+}
+
+#left{
+    background-color: white;
+    margin: 1em;
+    border: 2px solid black;
+    color: black;
+}
+#right{
+    background-color: white;
+    margin: 1em;
+    border: 2px solid black;
+    color: black;
+}
+#kick{
+    background-color: white;
+    margin: 1em;
+    border: 2px solid black;
+    color: black;
+}
+#punch{
+    background-color: white;
+    margin: 1em;
+    border: 2px solid black;
+    color: black;
+}
+#block{
+    background-color: white;
+    margin: 1em;
+    border: 2px solid black;
+    color: black;
+}
+
+.buttons{
+    background-color: gold;
+    border: 0.5vw solid red;
+    text-align: center;
+    width: 20%;
+    display: inline-block;
+    margin-left: 5%;
+    right: 10%;
+    padding: 1em;
+    position:absolute
+}
+.button:not(:last-child){
+    border-bottom:none;
+}
+
+.buttons > button{
+    padding: 1em;
+}
+.game{
+    padding-top: 3vw;
+    vertical-align: middle;
+}
