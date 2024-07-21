@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.background {
+  background-image: url('/bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.ps2p {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.vt323 {
+  font-family: 'VT323', monospace;
+  color: greenyellow;
+}
