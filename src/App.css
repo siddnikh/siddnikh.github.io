@@ -5,7 +5,8 @@
   background-image: url('/bg.jpeg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .ps2p {
@@ -15,4 +16,8 @@
 .vt323 {
   font-family: 'VT323', monospace;
   color: greenyellow;
+}
+
+.font-retro {
+  font-family: 'VT323', monospace;
 }
