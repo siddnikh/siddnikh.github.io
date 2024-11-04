@@ -1,9 +1,7 @@
+import PropTypes from 'prop-types';
 import "./App.css";
 
-function Home() {
-  const redirectToHome = () => {
-    window.location.href = "https://siddnikh.github.io/";
-  };
+function Home({ setCurrentPage }) {
 
   return (
     <div className="background overflow-clip">
@@ -11,10 +9,10 @@ function Home() {
         className="w-screen md:h-32 h-12 absolute top-0 left-0 pt-8 px-12 flex justify-between"
         id="navbar"
       >
-        <img
+      <img
           src="/home-logo.png"
           className="hover:scale-110 cursor-pointer md:inline-block hidden"
-          onClick={redirectToHome}
+          onClick={() => setCurrentPage('home')}
         />
         <div className="flex gap-8 items-center md:w-fit w-full justify-between">
           <a
@@ -45,21 +43,25 @@ function Home() {
           Full Stack Developer and Casual Designer
         </p>
         <div className="flex gap-8 mt-24">
-          <a href="/blogs">
-            <div className="vt323 bg-slate-800 flex flex-col items-center justify-center py-2 px-6 rounded-xl hover:scale-110">
+          <div onClick={() => setCurrentPage('blogs')}>
+            <div className="vt323 bg-slate-800 flex flex-col items-center justify-center py-2 px-6 rounded-xl hover:scale-110 cursor-pointer">
               <p className="md:text-3xl text-lg">Blogs</p>
               <p className="md:text-xl text-sm">(not always technical)</p>
             </div>
-          </a>
-          <a href="/projects">
-            <div className="vt323 bg-slate-800 flex h-full items-center justify-center py-2 px-6 rounded-xl hover:scale-110">
+          </div>
+          <div onClick={() => setCurrentPage('projects')}>
+            <div className="vt323 bg-slate-800 flex h-full items-center justify-center py-2 px-6 rounded-xl hover:scale-110 cursor-pointer">
               <p className="md:text-3xl text-lg">Projects</p>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
+Home.propTypes = {
+  setCurrentPage: PropTypes.func.isRequired,
+};
 
 export default Home;

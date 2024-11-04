@@ -1,10 +1,7 @@
 import "./App.css";
+import PropTypes from 'prop-types';
 
-function Blogs() {
-
-  const redirectToHome = () => {
-    window.location.href = "https://siddnikh.github.io/";
-  }
+function Blogs({ setCurrentPage }) {
 
   return (
     <div>
@@ -15,7 +12,7 @@ function Blogs() {
         <img
           src="/home-logo.png"
           className="hover:scale-110 cursor-pointer md:inline-block hidden"
-          onClick={redirectToHome}
+          onClick={() => setCurrentPage('home')}
         />
         <div className="flex gap-8 items-center md:w-fit w-full justify-between">
           <a
@@ -53,5 +50,9 @@ function Blogs() {
     </div>
   );
 }
+
+Blogs.propTypes = {
+  setCurrentPage: PropTypes.func.isRequired,
+};
 
 export default Blogs;

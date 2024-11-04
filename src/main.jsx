@@ -1,20 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Projects from './Projects';
 import Blogs from './Blogs';
 import './index.css';
 
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <Home setCurrentPage={setCurrentPage}/>;
+      case 'blogs':
+        return <Blogs setCurrentPage={setCurrentPage}/>;
+      case 'projects':
+        return <Projects setCurrentPage={setCurrentPage}/>;
+      default:
+        return <Home setCurrentPage={setCurrentPage}/>;
+    }
+  };
+
+  return (
+    <div>
+      {renderPage()}
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/siddnikh.github.io">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );

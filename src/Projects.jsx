@@ -1,10 +1,7 @@
 import "./App.css";
 import RetroCard from "./Card";
 
-function Blogs() {
-  const redirectToHome = () => {
-    window.location.href = "https://siddnikh.github.io/";
-  };
+function Blogs({ setCurrentPage }) {
 
   return (
     <div className="background">
@@ -13,7 +10,7 @@ function Blogs() {
         <img
           src="/home-logo.png"
           className="hover:scale-110 cursor-pointer md:inline-block hidden"
-          onClick={redirectToHome}
+          onClick={() => setCurrentPage('home')}
         />
         <div className="flex gap-8 items-center md:w-fit w-full justify-between">
           <a href="https://open.spotify.com/user/uv86e08ltalmn0ngxe4mywl58?si=b8d4f7a90d9449ed" target="_blank">
