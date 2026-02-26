@@ -1,35 +1,14 @@
 import "./App.css";
 import RetroCard from "./Card";
+import Navbar from "./components/Navbar";
 
-function Blogs({ setCurrentPage }) {
-
+function Projects() {
   return (
-    <div className="background">
-      {/* Navbar */}
-      <div className="w-screen md:h-32 h-12 top-0 left-0 pt-8 px-12 flex justify-between" id="navbar">
-        <img
-          src="/home-logo.png"
-          className="hover:scale-110 cursor-pointer md:inline-block hidden"
-          onClick={() => setCurrentPage('home')}
-        />
-        <div className="flex gap-8 items-center md:w-fit w-full justify-between">
-          <a href="https://open.spotify.com/user/uv86e08ltalmn0ngxe4mywl58?si=b8d4f7a90d9449ed" target="_blank">
-            <img src="/spotify.png" className="h-12 hover:scale-110" />
-          </a>
-          <a href="https://linkedin.com/in/siddnikh" target="_blank">
-            <img src="/linkedin.png" className="h-12 hover:scale-110" />
-          </a>
-          <a href="https://github.com/siddnikh" target="_blank">
-            <img src="/github.png" className="h-12 hover:scale-110" />
-          </a>
-          <a href="https://x.com/IngerDar" target="_blank">
-            <img src="/twitter.png" className="h-12 hover:scale-110" />
-          </a>
-        </div>
-      </div>
+    <div className="background min-h-screen">
+      <Navbar />
 
       {/* Main Content */}
-      <div className="mt-24 w-screen flex flex-col justify-center items-center">
+      <div className="pt-32 w-screen flex flex-col justify-center items-center">
         {/* Title */}
         <div className="flex items-center gap-12">
           <img src="/meteor.gif" alt="meteor gif" className="md:h-24 h-16" />
@@ -38,7 +17,8 @@ function Blogs({ setCurrentPage }) {
           </p>
           <img src="/meteor.gif" alt="meteor gif" className="md:h-24 h-16" />
         </div>
-        <div className="mt-14 flex flex-wrap justify-center gap-8">
+        
+        <div className="mt-14 flex flex-wrap justify-center gap-8 px-8 pb-16">
           <RetroCard
             imageSrc="/sicktalk.png"
             title="SICKTALK"
@@ -57,9 +37,7 @@ function Blogs({ setCurrentPage }) {
             description="A mad simple react app that lets you count days for anything. Born out of personal necessity."
             link="https://github.com/siddnikh/days"
           />
-        </div>
-        <div className="mt-14 flex flex-wrap justify-center gap-8">
-        <RetroCard
+          <RetroCard
             imageSrc="/home-logo.png"
             title="Activity Tracker App"
             description="A simple mobile app that helps in tracking your activities. Born out of personal necessity, as the habit tracker I was using asked for a premium subscription."
@@ -71,4 +49,4 @@ function Blogs({ setCurrentPage }) {
   );
 }
 
-export default Blogs;
+export default Projects;
